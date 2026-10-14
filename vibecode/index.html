@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biela - Oficina de bicicletas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&family=Manrope:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --grafite: #16181B;
+      --giz: #F1F2EC;
+      --amarelo: #F2C200;
+      --aco: #5A6169;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Manrope', sans-serif;
+      font-size: 1.05rem;
+      line-height: 1.6;
+      background: var(--giz);
+      color: var(--grafite);
+    }
+
+    h1, h2, h3 {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 800;
+      line-height: 1;
+      margin: 0 0 16px;
+    }
+    h1 { font-size: 4.5rem; }
+    h2 { font-size: 2.8rem; }
+    h3 { font-size: 1.7rem; margin-bottom: 8px; }
+    p { margin: 0 0 16px; }
+
+    .container { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
+    section { padding: 72px 0; }
+
+    .botao {
+      display: inline-block;
+      padding: 14px 24px;
+      background: var(--grafite);
+      color: var(--giz);
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .botao:hover { background: var(--amarelo); color: var(--grafite); }
+
+    /* Topo */
+    header { border-bottom: 2px solid var(--grafite); }
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 14px;
+      padding-bottom: 14px;
+    }
+    .logo {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--grafite);
+      text-decoration: none;
+    }
+    nav a { margin-left: 24px; color: var(--grafite); }
+
+    /* Hero */
+    .hero .container {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .hero .texto p { max-width: 460px; font-size: 1.15rem; margin-bottom: 28px; }
+    .destaque { background: var(--amarelo); padding: 32px; }
+    .destaque .preco {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-size: 4rem;
+      font-weight: 800;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .destaque p { margin-bottom: 0; }
+
+    /* Serviços */
+    .servicos { background: #fff; }
+    .servicos ul { list-style: none; margin: 32px 0 0; padding: 0; }
+    .servicos li {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 20px 0;
+      border-bottom: 1px solid #d5d7d0;
+    }
+    .servicos li p { margin: 0; color: var(--aco); }
+    .servicos .valor { font-weight: 700; white-space: nowrap; text-align: right; }
+
+    /* Como funciona */
+    .passos { margin: 32px 0 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+    .passos li { border-top: 6px solid var(--amarelo); padding-top: 16px; }
+    .passos p { margin: 0; }
+
+    /* Depoimento */
+    .depoimento { background: #fff; }
+    blockquote {
+      margin: 0;
+      padding-left: 24px;
+      border-left: 8px solid var(--amarelo);
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      line-height: 1.1;
+      max-width: 640px;
+    }
+    .autor { margin: 16px 0 0 32px; color: var(--aco); }
+
+    /* Contato */
+    .contato { background: var(--grafite); color: var(--giz); }
+    .contato .botao { background: var(--amarelo); color: var(--grafite); }
+    .contato .botao:hover { background: var(--giz); }
+
+    footer { background: var(--grafite); color: #b5bac0; padding: 0 0 32px; font-size: .9rem; }
+
+    @media (max-width: 720px) {
+      h1 { font-size: 3.2rem; }
+      h2 { font-size: 2.2rem; }
+      section { padding: 48px 0; }
+      nav { display: none; }
+      .hero .container, .passos { grid-template-columns: 1fr; }
+      .servicos li { flex-direction: column; gap: 4px; }
+      .servicos .valor { text-align: left; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <a class="logo" href="#">Biela</a>
+      <nav>
+        <a href="#servicos">Serviços</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="texto">
+        <h1>Sua bike de volta na rua em até 24 horas</h1>
+        <p>Oficina de bicicletas de bairro, na Vila Madalena. Mostramos o que encontramos antes de mexer em qualquer parafuso, e você só paga pelo que aprovar.</p>
+        <a class="botao" href="#contato">Agendar revisão</a>
+      </div>
+      <div class="destaque">
+        <h3>Revisão completa</h3>
+        <p class="preco">R$ 180</p>
+        <p>Freios, câmbio, transmissão, rolamentos e raios. Pronta em até 24 horas.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Serviços -->
+  <section class="servicos" id="servicos">
+    <div class="container">
+      <h2>Serviços e preços</h2>
+      <ul>
+        <li>
+          <div>
+            <h3>Câmara furada</h3>
+            <p>Troca da câmara e calibragem dos pneus.</p>
+          </div>
+          <span class="valor">R$ 35<br>30 minutos</span>
+        </li>
+        <li>
+          <div>
+            <h3>Regulagem de freios</h3>
+            <p>Ajuste de cabos e pastilhas e teste de frenagem.</p>
+          </div>
+          <span class="valor">R$ 45<br>1 hora</span>
+        </li>
+        <li>
+          <div>
+            <h3>Regulagem de câmbio</h3>
+            <p>Ajuste das trocas dianteira e traseira.</p>
+          </div>
+          <span class="valor">R$ 55<br>1 hora</span>
+        </li>
+        <li>
+          <div>
+            <h3>Limpeza da transmissão</h3>
+            <p>Corrente, cassete e coroa limpos e lubrificados.</p>
+          </div>
+          <span class="valor">R$ 70<br>3 horas</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Como funciona -->
+  <section id="como-funciona">
+    <div class="container">
+      <h2>Como funciona</h2>
+      <ol class="passos">
+        <li>
+          <h3>Você traz a bike</h3>
+          <p>Chegue sem hora marcada ou agende. Anotamos o que você já percebeu: barulho, folga, freio mole.</p>
+        </li>
+        <li>
+          <h3>Diagnóstico em 15 minutos</h3>
+          <p>Mostramos o que encontramos e quanto custa cada coisa. Você aprova o que quiser.</p>
+        </li>
+        <li>
+          <h3>Retire pronta</h3>
+          <p>Avisamos no WhatsApp quando terminar. As peças trocadas voltam com você.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Depoimento -->
+  <section class="depoimento">
+    <div class="container">
+      <blockquote>Pedi um ajuste no câmbio e saí sabendo o que estava gasto. Ninguém tinha me explicado minha bike assim.</blockquote>
+      <p class="autor">Marina Teles, vai de bike para o trabalho há seis anos</p>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section class="contato" id="contato">
+    <div class="container">
+      <h2>Agende sua revisão</h2>
+      <p>Rua das Correntes, 88, Vila Madalena, São Paulo<br>
+      Segunda a sábado, das 8h às 19h<br>
+      oi@biela.example</p>
+      <a class="botao" href="mailto:oi@biela.example">Chamar a oficina</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>Biela é uma marca fictícia criada para um exercício de vibecode.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
